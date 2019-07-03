@@ -1,5 +1,25 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+
+
+  form
+    .form-group
+      label アカウント名
+      input#userName.form-control(type="text" placeholder="Jane Doe")
+    .form-group
+      label メールアドレス
+      input#email.form-control(type="email" placeholder="test@domain.com")
+    .form-group
+      label パスワード
+      input#password.form-control(type="password" placeholder="")
+    .form-group()
+      input#userId.form-control(type='hidden')
+
+
+    .float-right
+        button#userAdd.btn.btn-primary(type='button') 登録
+  script(src='./scripts/liff.js')
+  script(src='./axios/dist/axios.min.js')
+
+
